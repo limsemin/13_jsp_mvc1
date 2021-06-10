@@ -39,7 +39,7 @@
 					<th>JOIN DATE</th>
 				</tr>
 		<%
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			
 			while(rs.next()){
 			String id 		= rs.getString("id"); 						//	rs.getString(1);		실질적으로 자주 쓰진 않는다.(이런 방법도 있다.)
