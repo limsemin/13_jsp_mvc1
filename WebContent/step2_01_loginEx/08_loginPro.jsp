@@ -24,7 +24,8 @@
 		//00_main.jsp페이지로 이동
 		//javascript의 location.href와 같은 기능을 한다.
 		response.sendRedirect("00_main.jsp");
-	}
+	} 	//response서버측에서 클라이언트측으로 데이터를 전달하기 위한 객체
+
 	else{	
 	%>
 		<script>
