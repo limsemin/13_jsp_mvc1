@@ -16,7 +16,7 @@
 				<td>작성자</td>
 				<td><input type="text" id="writer" name="writer" /></td>
 			</tr>
-			<tr >
+			<tr>
 				<td>제목</td>
 				<td><input type="text" id="subject" name="subject" /></td>
 			</tr>

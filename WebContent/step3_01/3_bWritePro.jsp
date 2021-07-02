@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>03_bWritePro</title>
+<title>3_bWritePro</title>
 </head>
 <body>
 	<%
@@ -13,16 +13,12 @@
 	<jsp:useBean id="boardDTO" class="step3_00_boardEx.BoardDTO">
 		<jsp:setProperty name="boardDTO" property="*" />
 	</jsp:useBean>
-	<% 
+	<%
 		BoardDAO.getInstance().insertBoard(boardDTO);
 	%>
-	
 	<script>
-		alert("등록 되었습니다.");
-		location.href="04_bList.jsp";
+		alert("등록 되었습니다.")
+		location.href="4_bList.jsp";
 	</script>
 </body>
 </html>
-
-
-

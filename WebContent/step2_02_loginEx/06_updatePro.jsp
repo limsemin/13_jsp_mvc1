@@ -14,10 +14,10 @@
 		String id     = request.getParameter("id");
 		String passwd = request.getParameter("passwd");
 		String name   = request.getParameter("name");
-	
+			
 		boolean isUpdate = MemberDAO.getInstance().updateMember(new MemberDTO(id,passwd,name));
 			  
-		if (isUpdate) {	
+		if (isUpdate) {
 	%>
 			<script>
 				alert("Information has changed.");

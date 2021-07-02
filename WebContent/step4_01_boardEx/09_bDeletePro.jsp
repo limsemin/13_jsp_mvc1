@@ -1,4 +1,4 @@
-<%@page import="step3_00_boardEx.BoardDAO"%>
+<%@page import="step4_00_boardEx.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,11 +7,10 @@
 <title>09_bDeletePro</title>
 </head>
 <body>
-	
 	<%
 		request.setCharacterEncoding("utf-8");
 	%>
-		<jsp:useBean id="boardDTO" class="step3_00_boardEx.BoardDTO">
+		<jsp:useBean id="boardDTO" class="step4_00_boardEx.BoardDTO">
 			<jsp:setProperty name="boardDTO" property="*"/>
 		</jsp:useBean>
 	<%
@@ -25,7 +24,7 @@
 			</script>
 	<%				
 		}
-		else{
+		else {
 	%>
 			<script>
 				alert("패스워드가 틀립니다.");

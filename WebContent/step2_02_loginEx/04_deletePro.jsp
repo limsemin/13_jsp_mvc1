@@ -9,16 +9,15 @@
 <body>
 	<%
 		request.setCharacterEncoding("utf-8");
-	
-		String id 	  = request.getParameter("id");
-		String passwd = request.getParameter("passwd");
 		
-		boolean isLeave = MemberDAO.getInstance().leaveMember(id,passwd);
+			String id 	  = request.getParameter("id");
+			String passwd = request.getParameter("passwd");
+			
+			boolean isLeave = MemberDAO.getInstance().leaveMember(id,passwd);
+			
+			if (isLeave) {
 		
-		if (isLeave) {
-			
-			session.invalidate();
-			
+		session.invalidate();
 	%>
 			<script>
 				alert("Your account has been deleted successfully.");

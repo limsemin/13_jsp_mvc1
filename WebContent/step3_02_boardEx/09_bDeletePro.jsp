@@ -25,7 +25,7 @@
 			</script>
 	<%				
 		}
-		else{
+		else {
 	%>
 			<script>
 				alert("패스워드가 틀립니다.");

@@ -5,16 +5,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>06_bUpdate</title>
+<title>6_bUpdate</title>
 </head>
 <body>
 	<%
-		int num=Integer.parseInt(request.getParameter("num"));	
-		BoardDTO bdto=BoardDAO.getInstance().getOneUpdateBoard(num);
+		int num=Integer.parseInt(request.getParameter("num"));
+		BoardDTO bdto = BoardDAO.getInstance().getOneUpdateBoard(num);
+	
 	%>
-	<form action="07_bUpdatePro.jsp" method="post" >
+	<form action="7_bUpdatePro.jsp" method="post">
 		<h1>게시글 수정하기</h1>
-		<table border="1">
+		<table border ="1">
 			<tr>
 				<td>작성자</td>
 				<td><%=bdto.getWriter()%></td>
@@ -33,13 +34,13 @@
 			</tr>
 			<tr>
 				<td>글내용</td>
-				<td><textarea rows="10" cols="60" name="content"><%=bdto.getContent()%></textarea></td>
+				<td><textarea rows="10" cols="60" name="content"><%=bdto.getContent() %></textarea></td>
 			</tr>
 		</table>
 		<p>
 			<input type="hidden" name="num" value="<%=bdto.getNum()%>" /> 
 			<input type="submit" value="글수정" />
-			<input type="button" onclick="location.href='04_bList.jsp'" value="전체글보기" />
+			<input type="button" onclick="location.href='4_bList.jsp'" value="전체글보기" />
 		</p>
 	</form>
 </body>

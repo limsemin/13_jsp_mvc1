@@ -15,8 +15,8 @@
 			<td>번호</td>
 			<td>제목</td>
 			<td>작성자</td>
-			<td>작성일</td>
 			<td>조회수</td>
+			<td>작성일</td>
 		</tr>	
 		<% 
 			ArrayList<BoardDTO> boardList = BoardDAO.getInstance().getAllBoard();
@@ -29,8 +29,8 @@
 						</a>
 					</td>
 					<td><%=boardList.get(i).getWriter()%></td>
-					<td><%=boardList.get(i).getRegDate()%></td>
 					<td><%=boardList.get(i).getReadCount()%></td>
+					<td><%=boardList.get(i).getRegDate()%></td>
 				</tr>				
 		<%		
 			}			

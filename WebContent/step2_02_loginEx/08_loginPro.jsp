@@ -8,21 +8,20 @@
 </head>
 <body>
 
-	<% 
-	
+	<%
 		request.setCharacterEncoding("utf-8");
+			
+			String id = request.getParameter("id");
+			String passwd = request.getParameter("passwd");
 		
-		String id = request.getParameter("id");
-		String passwd = request.getParameter("passwd");
-	
-		boolean isValidMember = MemberDAO.getInstance().login(id,passwd);
-		
-		if (isValidMember) {
-			session.setAttribute("id", id);
-			session.setMaxInactiveInterval(60 * 10); 
-			response.sendRedirect("00_main.jsp"); 
-		}
-		else {
+			boolean isValidMember = MemberDAO.getInstance().login(id,passwd);
+			
+			if (isValidMember) {
+		session.setAttribute("id", id);
+		session.setMaxInactiveInterval(60 * 10); 
+		response.sendRedirect("00_main.jsp"); 
+			}
+			else {
 	%>
 			<script>
 				alert("check your Id and Password");
